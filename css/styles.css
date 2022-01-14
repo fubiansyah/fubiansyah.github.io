@@ -2050,11 +2050,42 @@ body {
   background: #fff;
   padding-top: 1rem;
   position: fixed; }
+  .header.case.desktop {
+    display: block;
+    visibility: visible; }
+    @media (max-width: 767px) {
+      .header.case.desktop {
+        display: none;
+        visibility: hidden; } }
+  .header.case.mobile {
+    display: none;
+    visibility: hidden; }
+    @media (max-width: 767px) {
+      .header.case.mobile {
+        display: block;
+        visibility: visible; } }
   .header.case .wrapper_header {
     display: flex;
     justify-content: space-between; }
+    @media (max-width: 767px) {
+      .header.case .wrapper_header {
+        padding: 10px 20px;
+        position: relative; } }
   .header.case .header--logo p {
     color: #292929; }
+  .header.case nav ul.list-nav.open {
+    transform: translateY(0%); }
+  @media (max-width: 767px) {
+    .header.case nav ul {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      padding-left: 0;
+      background: #e04343;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      transform: translateY(-300%);
+      transition: all 0.5s ease-out; } }
   .header.case nav ul li {
     list-style: none;
     display: inline-block;
@@ -2064,7 +2095,18 @@ body {
       font-weight: bold; }
       @media (max-width: 767px) {
         .header.case nav ul li a {
-          font-size: 12px; } }
+          font-size: 12px;
+          color: #fff; } }
+  .header.case nav button {
+    outline: none;
+    background: none;
+    border: none; }
+    .header.case nav button span {
+      width: 30px;
+      height: 5px;
+      background: #e04343;
+      display: block;
+      margin-bottom: 3px; }
 
 .big-notice {
   font-size: 22px;
@@ -2090,8 +2132,14 @@ body {
   .center_images.small-images img {
     width: 280px;
     margin: 0 auto; }
+    @media (max-width: 767px) {
+      .center_images.small-images img {
+        width: 100%; } }
   .center_images img {
     max-width: 60%; }
+    @media (max-width: 767px) {
+      .center_images img {
+        max-width: 100%; } }
 
 .images-wrapper img {
   width: 100%; }
